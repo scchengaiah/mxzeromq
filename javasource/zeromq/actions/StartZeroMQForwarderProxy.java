@@ -42,13 +42,13 @@ public class StartZeroMQForwarderProxy extends CustomJavaAction<java.lang.Boolea
 			
 			ZMQForwarderProxyHelper.getInstance().start();
 			
-			LOG.info(String.format("Started ZMQ forwarder proxy - Publisher port: %s | Subscriber port: %s", 
+			LOG.info(String.format("Started ZMQ forwarder proxy - Publisher port: %s | Subscriber port: %s.", 
 					Constants.getPublisherPort(), Constants.getSubscriberPort()));
 			
 			return true;
 			
 		} catch (Exception ex) {
-			LOG.critical(String.format("Exception encountered while starting ZMQ forwarder:%n%s", 
+			LOG.critical(String.format("Exception encountered while starting ZMQ forwarder:%n%s.", 
 					Throwables.getRootCause(ex).getMessage()));
 			
 			return false;

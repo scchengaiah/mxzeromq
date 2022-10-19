@@ -91,7 +91,7 @@ public class ZMQSubscription {
 		if(Objects.nonNull(context))
 			context.close();
 
-		LOG.info(String.format("Cleaned up resources for the subscription:%s", 
+		LOG.info(String.format("Cleaned up resources for the subscription: %s", 
 				subscriber.getName()));
 
 	}

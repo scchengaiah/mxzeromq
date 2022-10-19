@@ -49,17 +49,17 @@ public class ZMQSubscriptionHelper {
 					// Update subscription map.
 					subscriptionMap.put(id, zmqSubscription);
 					
-					LOG.info(String.format("Subscription successful for the configuration %s", 
+					LOG.info(String.format("Subscription successful for the configuration: %s", 
 							zmqSubscriber.getName()));
 				} else
-					LOG.info(String.format("Subscription already exist for the configuration %s", 
+					LOG.info(String.format("Subscription already exist for the configuration: %s", 
 							zmqSubscriber.getName()));
 				
 				
 				
 			} catch(Exception ex) {
-				LOG.error(String.format("Exception encountered while subscribing for the configuration %s:%n", 
-						Throwables.getRootCause(ex).getMessage()));
+				LOG.error(String.format("Exception encountered while subscribing for the configuration %s:%n%s", 
+						zmqSubscriber.getName(), Throwables.getRootCause(ex).getMessage()));
 			}
 			
 		}));
@@ -82,10 +82,10 @@ public class ZMQSubscriptionHelper {
 					// Remove the subscription reference.
 					subscriptionMap.remove(id);
 					
-					LOG.info(String.format("Subscription removed for the configuration %s", 
+					LOG.info(String.format("Subscription removed for the configuration: %s", 
 							zmqSubscriber.getName()));
 				} else
-					LOG.info(String.format("Subscription does not exist for the configuration %s", 
+					LOG.info(String.format("Subscription does not exist for the configuration: %s", 
 							zmqSubscriber.getName()));
 				
 			} catch(Exception ex) {

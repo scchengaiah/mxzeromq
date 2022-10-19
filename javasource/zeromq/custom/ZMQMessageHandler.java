@@ -68,7 +68,7 @@ public class ZMQMessageHandler implements Runnable {
 
 					if(! msgList.isEmpty()) {
 
-						LOG.info(String.format("Received %s message(s) for the topic %s.", msgList.size(), topicStr));
+						LOG.info(String.format("Received %s message(s) for the topic: %s.", msgList.size(), topicStr));
 
 						Core.executeAsync(ctx, MICROFLOW_TO_EXECUTE, true, 
 								Map.of("ZMQSubscriber", subscriber.getMendixObject(),
