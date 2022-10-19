@@ -28,7 +28,7 @@ Unique name for the configuration.
 
 **Local**
 
-Use this when the forwarder component is enabled. Refer [here](#forwarder-component) for more information related to forwarder component. By this way, the configuration is setup to receive messages from the local publisher. **Host** and **Port** fields will be hidden for this configuration type.
+Use this when the forwarder component is enabled. Refer Forwarder component section for more information. By this way, the configuration is setup to receive messages from the local publisher. **Host** and **Port** fields will be hidden for this configuration type.
 
 **External**
 
