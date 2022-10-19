@@ -12,17 +12,13 @@ Refer to the **UseMe** folder for configuration related information.
 
 ### Subscription configuration
 
-Multiple Subscription configuration is supported by persisting the connection information via entity **ZMQSubscribe**r.
-
-![ZMQSubscriber](assets/20221019_095945_image.png)
+Multiple Subscription configuration is supported by persisting the connection information via entity **ZMQSubscriber**.
 
 Use snippet **SNIP_ZMQSubscriberConfiguration** to visualize subscription configuration overview.
 
 Configurations are created with the page **ZMQSubscriber_NewEdit.**
 
 > The **Save** action performs necessary validations and initiate or remove subscription for the configuration via **ACT_SaveZMQSubscriber** microflow. If you wish to use your own New/Edit page, please configure the microflow **ACT_SaveZMQSubscriber** for the **Save** action to avoid issues.
-
-![ZMQSubscriber_NewEdit](assets/20221019_100852_image.png)
 
 #### Name
 
@@ -59,8 +55,6 @@ Topic to subscribe.
 ### Forwarder component
 
 Forwarder component receives messages from several publishers and forwards them to multiple subscribers.
-
-![ForwarderComponent](assets/20221019_103116_image.png)
 
 This component will be enabled if the constant **ForwarderProxyEnabled** is set to **True**.
 
